@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.topDiv{
+  @apply flex min-h-screen flex-col items-center justify-between p-24;
+}
+.btn{
+  @apply border-4 py-2 px-3 border-red-100 rounded-xl;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
