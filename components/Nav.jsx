@@ -1,14 +1,17 @@
-'use client'
 import Link from 'next/link'
 import React from 'react'
+import SearchBar from './SearchBar'
 
 function Nav() {
+
   return (
-    <div className=' flex gap-5 justify-center items-center'>
+    <div className=' flex gap-5 justify-center items-center mt-4'>
       <Link href={'/'}>  Nav bar </Link> 
-        <Link href={'/posts'} className="btn">Post page</Link>
-        <Link href={'/posts/new'} className="btn">New Post page</Link>
-        <Link href={'/posts/postidkjrnnt'} className="btn"> Post id page</Link>
+        <Link href={'/posts'} className="btn">Post</Link>
+        <Link href={'/posts/new'} className="btn">NewPost</Link>
+        <Link href={'/posts/postidkjrnnt'} className="btn">PostId</Link> 
+        <Link href={'/contect'} className="btn">Contect</Link> 
+        <SearchBar/>
     </div>
   )
 }
