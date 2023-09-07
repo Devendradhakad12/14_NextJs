@@ -9,14 +9,7 @@
 // 7. **OPTION**: Retrives the supported HTTP methods and other communication option for a resource.
  
 
-export async function GET(request){
-    // Handle GET request for /api/users
-    // Retrieve users from the database or any data source
-    const user =[
-        {id:1,name:tony},
-        {id:2,name:steve}
-    ]
-}
-
-// Send the users as a response
-return new Response(JSON.stringify(user))
+export default function handler(req, res) {
+    res.status(200).json({ message: 'Hello from Next.js!' })
+  }
+ 

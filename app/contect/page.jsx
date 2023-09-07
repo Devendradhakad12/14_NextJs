@@ -1,4 +1,4 @@
- import React from 'react'
+import React from 'react'
 import Contect from './contect'
 import ServerComponent from '@components/ServerComponent'
  
