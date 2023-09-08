@@ -17,7 +17,9 @@ return await res.json();
 
 // get users post
 export const getUserPosts = async(id)=>{
-    const res  = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
+    const res  = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`,{
+        next:{revalidate:60}
+    })
     if(!res.ok){
         return new Error("Something went Wrong")
         }
@@ -29,4 +31,13 @@ setTimeout(()=>{
 resolve(data)
 },2000)
     })
+}
+
+// get users post
+export const getAllPosts = async () => {
+    const res  = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+    if(!res.ok){
+        return new Error("Something went Wrong")
+        }
+        return await res.json();
 }
